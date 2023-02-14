@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-import requests
 from get_disease import get_disease
 
 app = Flask(__name__)
