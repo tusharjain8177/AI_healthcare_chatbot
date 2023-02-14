@@ -3,3 +3,5 @@ requests
 gunicorn
 numpy
 pandas
+scikit-learn
+difflib
