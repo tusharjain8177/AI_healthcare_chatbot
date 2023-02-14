@@ -3,6 +3,9 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder
 import difflib
+import warnings
+
+warnings.filterwarnings('ignore')
 
 model = joblib.load('model.pkl')
 
