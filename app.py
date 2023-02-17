@@ -8,8 +8,8 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 data = pickle.load(open('data.pkl', 'rb'))
 
-d = pickle.load(open('d.pkl', 'rb'))
-d = pd.DataFrame(d)
+d_dict = pickle.load(open('d.pkl', 'rb'))
+d = pd.DataFrame(d_dict)
 
 app = Flask(__name__)
 
