@@ -9,6 +9,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 data = pickle.load(open('data.pkl', 'rb'))
 
 d = pickle.load(open('d.pkl', 'rb'))
+d = pd.DataFrame(d)
 
 app = Flask(__name__)
 
