@@ -8,8 +8,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 data = pickle.load(open('data.pkl', 'rb'))
 
-d_dict = pickle.load(open('d.pkl', 'rb'))
-d = pd.DataFrame(d_dict)
+d = pd.read_csv('datasets/symptom_severity.csv')
 
 app = Flask(__name__)
 
