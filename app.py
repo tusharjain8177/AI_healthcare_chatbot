@@ -2,13 +2,13 @@ from flask import Flask, render_template, request, jsonify
 import pickle
 import pandas as pd
 
-df1 = pd.read_csv('datasets\Symptom-severity.csv')
+df1 = pd.read_csv(r'datasets/Symptom-severity.csv')
 
 model = pickle.load(open('model.pkl', 'rb'))
 
 data = pickle.load(open('data.pkl', 'rb'))
 
-d = pd.read_csv('datasets\d.csv')
+d = pd.read_csv(r'datasets/d.csv')
 
 app = Flask(__name__)
 
