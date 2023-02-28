@@ -7,10 +7,10 @@ app = Flask(__name__)
 def index():
     data = request.get_json()
     symptom = data['queryResult']['parameters']['symptoms_name']
-    output = dosomething(symptom)
+    disease = dosomething(symptom)
 
     response = {
-        'fulfillmentText':"You may have {}.".format(output[0])
+        'fulfillmentText':"You may have {}.".format(disease[0])
     }
     return jsonify(response)
 
