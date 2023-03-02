@@ -12,7 +12,7 @@ def index():
     medicine = get_medicient(disease)
 
     response = {
-        'fulfillmentText':"You may have {}.".format(disease[0])+ " You can take {}.".format(medicine)
+        'fulfillmentText':"You may have {}.".format(disease[0])+ " You can take {}.".format(medicine[0])
     }
     return jsonify(response)
 
