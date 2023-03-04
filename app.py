@@ -64,6 +64,7 @@ def get_mediciens(disease):
                               'cefuroxime',
                               'retapamulin',
                               'ozenoxacin']}
+    disease = disease.lower()
     if disease in mediciens:
         return mediciens[disease]
     else:
