@@ -10,7 +10,7 @@ def index():
     symptom = data['queryResult']['parameters']['symptoms_name']
     disease = dosomething(symptom)
     medicine = get_mediciens(disease[0])
-    if medicine:
+    if medicine != "No medicine found for this disease":
         response = {
             'fulfillmentText': "You may have {}.".format(disease[0]) + " You can take {}.".format(medicine)
         }
