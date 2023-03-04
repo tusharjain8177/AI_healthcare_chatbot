@@ -9,7 +9,7 @@ def index():
     data = request.get_json()
     symptom = data['queryResult']['parameters']['symptoms_name']
     disease = dosomething(symptom)
-    medicine = get_mediciens(disease)
+    medicine = get_mediciens(disease[0])
 
     response = {
         'fulfillmentText': "You may have {}.".format(disease[0]) + " You can take {}.".format(medicine)
