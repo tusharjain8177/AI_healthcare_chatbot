@@ -10,7 +10,7 @@ def index():
     symptom = data['queryResult']['parameters']['symptoms_name']
     disease = dosomething(symptom)
     medicine = get_mediciens(disease[0])
-    if medicine != "No medicine found for this disease":
+    if type(medicine) == list :
         response = {
             'fulfillmentText': "You may have {}.".format(disease[0]) + " You can take {}.".format(medicine)
         }
@@ -18,7 +18,7 @@ def index():
         response = {
             'fulfillmentText': "You may have {}.".format(disease[0]) + " No medicine found for this disease."
         }
-    print(response)
+    # print(response)
     return jsonify(response)
 
 
@@ -72,4 +72,4 @@ def get_mediciens(disease):
     if disease in mediciens:
         return mediciens[disease]
     else:
-        return "No medicine found for this disease"
+        return "No medicine found for this disease."
