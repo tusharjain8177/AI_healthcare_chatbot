@@ -12,7 +12,7 @@ def index():
     medicine = get_mediciens(disease[0])
     if type(medicine) == list :
         response = {
-            'fulfillmentText': "You may have {}.".format(disease[0]) + " You can take {}.".format(medicine)
+            'fulfillmentText': "You may have {}.".format(disease[0]) + " You can take {}.".format(medicine) + "Whould you like to book an appointment?(Yes/No)"
         }
     else:
         response = {

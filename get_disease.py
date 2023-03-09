@@ -6,11 +6,14 @@ import pickle
 
 data = pd.read_csv(os.path.join("datasets", "Training.csv"))
 df = pd.DataFrame(data)
+
 model = pickle.load(open(os.path.join("models", "model.pkl"), "rb"))
 indices = [i for i in range(132)]
 symptoms = df.columns.values[:-1]
 
 dictionary = dict(zip(symptoms,indices))
+
+dimensionality_reduction = data.groupby(data['prognosis']).max()
 
 def dosomething(symptom):
     user_input_symptoms = symptom
